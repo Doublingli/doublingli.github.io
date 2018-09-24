@@ -30,6 +30,9 @@ blacklist nvidiafb
 8. 重启好以后使用Terminal可以用nvidia-smi命令查看是否安装成功，并且找到GPU
 
 正常情况一切都OK，今天遇到了一个奇怪的现象在第8步使用nvidia-smi命令的时候，一直出现no devices were found!
+
+![WechatIMG601](https://doublingli.github.io/images/WechatIMG601.jpeg)
+
 非常生气！今天是中秋节!折腾了一整天，参考了无数的文章，包括：
 https://devtalk.nvidia.com/default/topic/847649/nvidia-smi-quot-no-devices-were-found-quot-error-/
 https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance/plugging-tesla-k80-results-in-pci-resource-allocation-error-/
@@ -45,17 +48,23 @@ https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance
 
 拔掉旧显卡，OK.......
 
-
-
-
-
-![WechatIMG602](/Users/lili/Downloads/WechatIMG602.jpeg)
+![WechatIMG602](https://doublingli.github.io/images/WechatIMG602.jpeg)
 
 1080Ti换回原来位置，又不行了！！！ 
 
-![WechatIMG603](/Users/lili/Documents/doublingli.github.io/images/WechatIMG603.jpeg)
+![WechatIMG603](https://doublingli.github.io/images/WechatIMG603.jpeg)
+
+
+
+
+
+
 
  原来是这个PCIE槽有问题！！！！！！！我勒个大去。。。天坑啊！！
 
 
+
+完成了。。百搭了一个中秋节。。为自己点赞。
+
+![WechatIMG604](https://doublingli.github.io/images/WechatIMG604.jpeg)
 
