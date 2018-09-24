@@ -27,7 +27,7 @@ blacklist nvidiafb
 
 
 
-### 天坑
+### **天坑**
 
 正常情况一切都OK，今天遇到了一个奇怪的现象在第8步使用nvidia-smi命令的时候，一直出现no devices were found!
 
