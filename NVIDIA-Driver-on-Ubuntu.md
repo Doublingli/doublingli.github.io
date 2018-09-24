@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: ./images
+---
+
 今天搭建Ubuntu mate 16.04 + NVIDIA GTX 1080Ti + CUDA + Tensorflow的环境
 
 之前搭建过一次，本次升级了主板和内存后，重新搭建。
@@ -41,11 +45,15 @@ https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance
 
 拔掉旧显卡，OK.......
 
+
+
+
+
 ![WechatIMG602](/Users/lili/Downloads/WechatIMG602.jpeg)
 
 1080Ti换回原来位置，又不行了！！！ 
 
-![WechatIMG603](/Users/lili/Downloads/WechatIMG603.jpeg)
+![WechatIMG603](/Users/lili/Documents/doublingli.github.io/images/WechatIMG603.jpeg)
 
  原来是这个PCIE槽有问题！！！！！！！我勒个大去。。。天坑啊！！
 
