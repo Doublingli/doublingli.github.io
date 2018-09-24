@@ -53,7 +53,7 @@ https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance
 
 1080Ti换回原来位置，又不行了！！！ 
 
-![WechatIMG603](/Users/lili/Documents/doublingli.github.io/images/WechatIMG603.jpeg)
+![WechatIMG603](https://doublingli.github.io/images/WechatIMG603.jpeg)
 
  原来是这个PCIE槽有问题！！！！！！！我勒个大去。。。天坑啊！！
 
