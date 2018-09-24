@@ -56,8 +56,6 @@ https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance
 
  原来是这个PCIE槽有问题！！！！！！！我勒个大去。。。天坑啊！！
 
-
-
 完成了。。百搭了一个中秋节。。为自己点赞。
 
 ![WechatIMG604](https://doublingli.github.io/images/WechatIMG604-7813857.jpeg)
