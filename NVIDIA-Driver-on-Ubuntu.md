@@ -6,7 +6,7 @@
 
 1. 官网下载安装包，制作USB安装盘，安装Ubuntu mate 16.04
 2. 安装完成第一次启动，不需要输入密码登录，直接使用ctrl+alt+F1进入命令行
-3. 因为需要安装显卡驱动，需要关闭图形界面，sudo systemctl stop lightmd
+3. 因为需要安装显卡驱动，需要关闭图形界面，sudo systemctl stop lightdm
 4. 因为原本Ubuntu自带了一个nouveau驱动，如果不禁用会导致NVIDIA驱动安装失败，
     4.1. 禁用nouveau主要是加一些blacklist, 追加在/etc/modprobe.d/blacklist.conf后面就可以
 ```properties
