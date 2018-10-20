@@ -62,3 +62,17 @@ https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance
 完成了。。白搭了一个中秋节。。为自己点赞。
 
 ![WechatIMG604](https://doublingli.github.io/images/WechatIMG604-7813857.jpeg)
+
+
+今天公司搬家后nvidia-smi又无法正常打印信息了。错误信息如下：
+
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+什么都没有动，突然就不行了。 搬家还能把驱动搬坏了？
+
+经过查找资料定位到可能是之前进行了更新，但是之前一直没有重启所以更新没有生效，搬家切断电源重启以后内核自动升级到4.15.0-36，与nvidia-384有不和谐到地方导致驱动无法正常启动。
+
+后来通过降级内核到4.15.0-34解决问题
+
+
+
