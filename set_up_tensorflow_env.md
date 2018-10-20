@@ -8,7 +8,7 @@
 2. 安装完成第一次启动，不需要输入密码登录，直接使用ctrl+alt+F1进入命令行
 3. 因为需要安装显卡驱动，需要关闭图形界面，sudo systemctl stop lightdm
 4. 因为原本Ubuntu自带了一个nouveau驱动，如果不禁用会导致NVIDIA驱动安装失败，
-    4.1. 禁用nouveau主要是加一些blacklist, 追加在/etc/modprobe.d/blacklist.conf后面就可以
+  4.1. 禁用nouveau主要是加一些blacklist, 追加在/etc/modprobe.d/blacklist.conf后面就可以
 ```properties
 blacklist vga16fb 
 blacklist nouveau 
@@ -16,11 +16,14 @@ blacklist rivafb
 blacklist rivatv 
 blacklist nvidiafb
 ```
-  	4.2. 重新编译内核 sudo update-initramfs -u
-  	4.3. 重新启动即可
+
+  4.2. 重新编译内核 sudo update-initramfs -u
+  4.3. 重新启动即可
+    
 5. 清除旧的驱动 sudo apt purge nvidia-*
     5.1 如果不放心还可以自动清除一下相关包 sudo apt autoremove
 6. 安装新驱动 sudo apt install nvidia-384 nvidia-settings nvidia-prime
+
     6.1 这里面的nvidia-384是我现在使用的驱动版本，可以根据实际情况修改
 7. 完成后 sudo reboot 启动好了就可以了
 8. 重启好以后使用Terminal可以用nvidia-smi命令查看是否安装成功，并且找到GPU
