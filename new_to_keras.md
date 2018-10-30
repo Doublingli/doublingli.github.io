@@ -51,4 +51,4 @@ model = Sequential()
 
 其实这是一个十分简单的逻辑，应该只需要一个神经元就能够解决（拟合）这个逻辑，但是这边为了多一些尝试使用两层神经元，使用全连接神经元（Dense）
 
-![image-20181030155052491](/Users/lili/Documents/doublingli.github.io/images/step2_1.jpg)
+![step2_1](./images/step2_1.jpg)
