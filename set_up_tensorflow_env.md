@@ -2,6 +2,21 @@
 
 之前搭建过一次，本次升级了主板和内存后，重新搭建，跳进了一个大坑。
 
+
+
+
+
+依赖环境： 
+
+1. Ubuntu 16.04
+2. gcc 5.4
+3. nvidia-384 nvidia-settings nvidia-prime
+4. tensorflow-gpu 1.2
+5. cuda 8.0
+6. cuduu 8.0
+
+
+
 ### 主要步骤
 
 1. 官网下载安装包，制作USB安装盘，安装Ubuntu mate 16.04
@@ -33,6 +48,8 @@
 8. 重启好以后使用Terminal可以用nvidia-smi命令查看是否安装成功，并且找到GPU
 
 
+
+**错误1:  No devices were found**
 
 ### **天坑**
 
@@ -71,6 +88,9 @@ https://devtalk.nvidia.com/default/topic/816404/cuda-programming-and-performance
 ![WechatIMG604](https://doublingli.github.io/images/WechatIMG604-7813857.jpeg)
 
 
+
+**错误2 NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.**
+
 今天公司搬家后nvidia-smi又无法正常打印信息了。错误信息如下：
 
 NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
@@ -80,6 +100,14 @@ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Ma
 经过查找资料定位到可能是之前进行了更新，但是之前一直没有重启所以更新没有生效，搬家切断电源重启以后内核自动升级到4.15.0-36，与nvidia-384有不和谐到地方导致驱动无法正常启动。
 
 后来通过降级内核到4.15.0-34解决问题
+
+
+
+错误3 ： libcudnn.so.6: cannot open shared object file: No such file or directory
+
+tensorflow的版本和cuda cudnn版本不匹配
+
+我用的是cuda8.0 tensorflow需要1.2
 
 
 
