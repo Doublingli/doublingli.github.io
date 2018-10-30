@@ -1,5 +1,6 @@
 ---
 typora-copy-images-to: ./images
+typora-root-url: ./images
 ---
 
 Keras-Keras的初体验
@@ -51,4 +52,12 @@ model = Sequential()
 
 其实这是一个十分简单的逻辑，应该只需要一个神经元就能够解决（拟合）这个逻辑，但是这边为了多一些尝试使用两层神经元，使用全连接神经元（Dense）
 
-![step2_1](./images/step2_1.jpg)
+![image-20181030160327703](/image-20181030160327703.png)
+
+```
+# 一个全连接层， 有两个神经元，使用relu函数激活，定义的输入参数是一个长度为2的一维向量
+model.add(Dense(2, activation="relu", batch_input_shape=(None, 2)))
+
+# 一个全连接输出层，有一个输出神经元，使用sigmoid函数激活，定义输出为一个标量
+```
+
