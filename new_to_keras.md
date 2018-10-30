@@ -1,8 +1,3 @@
----
-typora-copy-images-to: ./images
-typora-root-url: ./images
----
-
 # Keras-Keras的初体验
 
 
