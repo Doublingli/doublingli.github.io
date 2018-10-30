@@ -4,9 +4,13 @@ typora-copy-images-to: ./images
 
 # Keras初体验的Tips
 
+**Keywords: Keras,可复现,局部最优,reproduce,模型**
+
 
 
 接上回：上回初体验Keras训练一个实现与门逻辑的模型过程中遇到两个问题：
+
+
 
 问题1: 训练出来的模型准确率有时候达不到100%？我们怎么去定位+解决这个问题？
 
@@ -14,7 +18,42 @@ typora-copy-images-to: ./images
 
 
 
-第一个问题，暂时还没有理解透彻，目前所知的理解是模型比较简单，神经元比较小，因此训练的参数设置不当导致模型优化过程中落入局部最优解，并且跑不出来了。
+## 第二个问题：
+
+先看第二个问题把，其实Keras官方文档中已经给出了答案：
+
+https://keras-cn.readthedocs.io/en/latest/for_beginners/FAQ/#keras_5
+
+由于我们的模型初始化的weights是随机给予的，因此每次随机出来的weights不一样就会导致每次训练的出发点不一样，有时候运气好的时候可以得到全剧最优，有时候运气不好的时候则只能得到局部最优了。
+
+
+
+如果需要得到可以复现的模型，训练前需要设定几个随机方法的种子（seed）
+
+```python
+import os
+os.environ["PYTHONHASHSEED"] = '0'
+import random as rn
+import tensorflow as tf
+import keras.backend as K
+
+np.random.seed(50)
+rn.seed(12345)
+session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
+tf.set_random_seed(1234)
+sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
+K.set_session(sess)
+```
+
+
+
+
+
+**WARNING：下面只是对问题1的思考，目前还没有搞清楚，以后清楚了再来完善。**
+
+### 第一个问题:
+
+暂时还没有理解透彻，目前所知的理解是模型比较简单，神经元比较小，因此训练的参数设置不当导致模型优化过程中落入局部最优解，并且跑不出来了。
 
 
 
