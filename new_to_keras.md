@@ -3,7 +3,7 @@ typora-copy-images-to: ./images
 typora-root-url: ./images
 ---
 
-Keras-Keras的初体验
+# Keras-Keras的初体验
 
 
 
@@ -34,7 +34,7 @@ Sequential（翻译为序贯）模型是一个十分基础款的模型，能够�
 
 
 
-第一步：
+#### 第一步：
 
 创建一个Sequential模型
 
@@ -46,7 +46,7 @@ model = Sequential()
 
 
 
-第二步：
+#### 第二步：
 
 为模型添加层（Layer）
 
@@ -64,7 +64,7 @@ model.add(Dense(1, activation="sigmoid"))
 
 
 
-第三步：
+#### 第三步：
 
 设置模型的优化器，损失函数，评估量度及编译模型
 
@@ -81,7 +81,7 @@ model.compile(optimizer=sgd, loss=loss, metrics=[measure])
 
 
 
-第三步：
+#### 第四步：
 
 构造训练数据，将得到一个100x2的矩阵作为data，一个100*1的向量作为label
 
@@ -96,7 +96,7 @@ labels = np.array(list(map(lbda, data)))
 
 
 
-第四步：
+#### 第五步：
 
 进行模型的训练，训练epoch（就是所有数据都用来训练一次为1epoch）指定为1000，并且每次数据的batch指定为32个，从训练数据集中分出10%的数据作为验证集
 
@@ -106,7 +106,7 @@ model.fit(data, labels, epochs=1000, batch_size=32, validation_split=0.1)
 
 
 
-第五步：
+#### 第六步：
 
 使用测试集计算最终模型的准确度和损失，并且打印结果。
 
@@ -118,7 +118,17 @@ print("%s : %s" % (model.metrics_names[1], score[1]))
 
 
 
+如果一切都非常的顺利，1000epochs后可以得到一个实现与门功能的Sequential模型：
+
+![step_6_1.png](./images/step_6_1.png)
+
+
+
 由于使用的神经元较少，很容易落入局部最优，多训练几次就能看到模型训练结束的时候准确率达不到100%
+
+![step_6_2.png](./images/step_6_2.png)
+
+
 
 问题1: 这其中出现了什么事情呢？我们怎么去定位+解决？
 
