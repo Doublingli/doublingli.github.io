@@ -40,12 +40,24 @@
      3. 重新编译内核 sudo update-initramfs -u
 
      4. 重新启动即可
+
 5. 清除旧的驱动 sudo apt purge nvidia-*
+
     1. 如果不放心还可以自动清除一下相关包 sudo apt autoremove
+
 6. 安装新驱动 sudo apt install nvidia-384 nvidia-settings nvidia-prime
+
     1. 这里面的nvidia-384是我现在使用的驱动版本，可以根据实际情况修改
+
 7. 完成后 sudo reboot 启动好了就可以了
+
 8. 重启好以后使用Terminal可以用nvidia-smi命令查看是否安装成功，并且找到GPU
+
+9. 安装cuda 8.0，到NVIDIA官网下载cuda8.0，选对系统，我这边选的是runfile安装方式，下载好后sudo sh xxx.run 安装即可，注意不需要安装附带的驱动程序，因为之前已经安装了384
+
+10. 安装tensorflow的gpu版本，pip install --user -i https://pypi.douban.com/simple tensorflow-gpu
+
+11. 安装cudnn，在官网直接下载cudnn5.1 for cuda8.0 的即可，我是ubuntu14.04直接下载deb安装包
 
 
 
